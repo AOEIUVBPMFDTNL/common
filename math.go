@@ -1,4 +1,4 @@
-package bet
+package common
 
 import (
 	"math"
@@ -19,7 +19,7 @@ func Factorial(n int) (res int) {
 	return
 }
 
-// 计算阶乘 大数字
+// 计算阶乘 大数
 func FactorialBig(n int64) (res *big.Int) {
 	if n < 1 {
 		res = big.NewInt(1)
@@ -49,7 +49,7 @@ func CombinationCount(n int, m int, repeat bool) int {
 	return Factorial(n) / (Factorial(n-m) * Factorial(m))
 }
 
-// 排列解析
+// 排列数解析
 func PermutationParse[T comparable](arr []T, r int, repeat bool) (result [][]T) {
 	n := len(arr)
 	if repeat {
@@ -117,7 +117,7 @@ func PermutationParse[T comparable](arr []T, r int, repeat bool) (result [][]T) 
 	return
 }
 
-// 组合解析
+// 组合数解析
 func CombinationParse[T comparable](arr []T, r int, repeat bool) (result [][]T) {
 	sendIndex := func(base []T, index []int) []T {
 		res := make([]T, len(index))
@@ -175,7 +175,7 @@ func CombinationParse[T comparable](arr []T, r int, repeat bool) (result [][]T) 
 	return
 }
 
-// 多切片组合解析
+// 多切片组合计算
 func CombinationManyCount[T comparable](arr [][]T, repeat bool) (total int) {
 	// 循环次数
 	var count = 1
