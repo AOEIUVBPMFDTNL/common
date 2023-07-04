@@ -9,7 +9,6 @@ import (
 	"encoding/hex"
 )
 
-// 加密密钥 hex.EncodeToString(h.Sum(b))
 func EncryptKey(key []byte, b ...byte) []byte {
 	h := md5.New()
 	h.Write(key)
