@@ -1,4 +1,4 @@
-package common
+package github.com/AOEIUVBPMFDTNL/common
 
 import (
 	"bytes"
