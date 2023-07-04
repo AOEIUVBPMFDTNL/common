@@ -5,7 +5,7 @@ import (
 	"math/big"
 )
 
-// 计算阶乘
+// 阶乘
 func Factorial(n int) (res int) {
 	if n < 1 {
 		res = 1
@@ -19,7 +19,7 @@ func Factorial(n int) (res int) {
 	return
 }
 
-// 计算阶乘 大数
+// 大数阶乘
 func FactorialBig(n int64) (res *big.Int) {
 	if n < 1 {
 		res = big.NewInt(1)
